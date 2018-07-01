@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧菜单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="normalize/normalize.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        .left {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 20%;
+            height: 100%;
+            background-color: rgb(47,53,61);
+        }
+        .right {
+            width: 80%;
+            height: 100%;
+        }
+
+        .menu {
+            color: white;
+        }
+
+        .title {
+            text-align: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid #23282e;
+        }
+
+        .items {
+            background-color: #181c20;
+        }
+
+        .item {
+            padding: 5px 10px;
+            border-bottom: #181c20;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="left">
+    <div class="menu">
+        <div class="title">菜单一</div>
+        <div class="items hide">
+            <div class="item">111</div>
+            <div class="item">222</div>
+            <div class="item">333</div>
+        </div>
+        <div class="title">菜单二</div>
+        <div class="items hide">
+            <div class="item">111</div>
+            <div class="item">211</div>
+            <div class="item">311</div>
+        </div>
+        <div class="title">菜单三</div>
+        <div class="items hide">
+            <div class="item">1111</div>
+            <div class="item">2111</div>
+            <div class="item">3111</div>
+        </div>
+    </div>
+</div>
+<div class="right"></div>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    $('.title').click(function () {
+        $('.items').addClass('hide');
+        $(this).next().removeClass('hide')
+    });
+</script>
+</body>
+</html>
